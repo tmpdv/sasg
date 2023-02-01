@@ -15,6 +15,7 @@ const pgClient = new Pool({
 
 
 http.createServer((req, res) => {
-    const proc = findProcessor(req.url, req.method);
-    proc(req, res, pgClient);
+    const params = {pathVars: {}};
+    const proc = findProcessor(req.url, req.method, params);
+    proc(req, res, pgClient, params);
 }).listen(3000);
