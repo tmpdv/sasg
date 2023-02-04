@@ -1,8 +1,9 @@
-const {getAllUsers, getUserById} = require("./processors.js");
+const {getAllUsers, getUserById, createUser} = require("./user/processors.js");
 
 const URL_PROCESSOR_MAP = {
     "users": {
         GET: getAllUsers,
+        POST: createUser,
         var: {
             name: "userId",
             type: 'Number',
