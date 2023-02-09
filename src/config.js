@@ -5,6 +5,9 @@ const PG_DB = 'postgres';
 const PG_PORT = 5432;
 
 module.exports = {
+    server: {
+      PORT: 3000,
+    },
     db: {
         PG_USER: PG_USER,
         PG_PASSWORD: PG_PASSWORD,
